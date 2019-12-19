@@ -15,9 +15,7 @@ function watchForm() {
 
 // n should go where the 3 is in the endpoint url
 function getDogImages(n) {
-        fetch(`https://dog.ceo/api/breeds/image/random/${n}`, {
-            credentials: "include"
-        })
+        fetch(`https://dog.ceo/api/breeds/image/random/${n}`)
         .then(response => response.json())
         .then(responseJson => console.log(responseJson))
         .catch(error => alert("Apologies, one of the puppies had an accident and we're cleaning it up. Please try again in a few moments."));
